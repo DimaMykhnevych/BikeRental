@@ -1,0 +1,22 @@
+/* .header {
+  margin-bottom: 100px;
+} */
+.main-content {
+  margin-top: 100px;
+}
+.position-fixed {
+  z-index: 5;
+}
+
+.footer {
+  background-color: #c2175b;
+}
+.footer-links a {
+  color: white;
+}
+.footer-copyright a {
+  color: white;
+}
+.footer-links a:hover {
+  cursor: pointer;
+}

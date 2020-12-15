@@ -1,0 +1,68 @@
+/* .main {
+  height: 100vh;
+} */
+.main-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  padding: 10px;
+}
+
+.line {
+  width: 100px;
+  height: 5px;
+  background-color: rgb(230, 98, 120);
+  margin-bottom: 30px;
+}
+.example-card {
+  max-width: 300px;
+}
+.bike-img {
+  width: 50px;
+}
+.why-we {
+  font-weight: bold;
+  font-size: 2em;
+}
+.bike-anim {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+
+.bike-anim2 {
+  position: absolute;
+  top: -20px;
+  left: 930px;
+}
+.descr {
+  font-size: 1.2em;
+}
+/* .card {
+  height: 140px;
+} */
+mat-card-content {
+  margin: 0;
+  padding: 0;
+}
+mat-card-content p {
+  font-size: 1.4em;
+  line-height: 23px;
+}
+.example-header-image {
+  background-image: url("../../assets/images/1Number.png");
+  background-size: cover;
+}
+
+.example-header-image2 {
+  background-image: url("../../assets/images/2Number.png");
+  background-size: cover;
+}
+.example-header-image3 {
+  background-image: url("../../assets/images/3Number.png");
+  background-size: cover;
+}
+
+.example-header-image4 {
+  background-image: url("../../assets/images/4Number.png");
+  background-size: cover;
+}
