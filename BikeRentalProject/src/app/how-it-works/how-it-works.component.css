@@ -1,0 +1,140 @@
+.three-D {
+  text-shadow: 1px 1px #732372, 1px -1px #732372, -1px 1px #732372,
+    -1px -1px #732372, 3px 3px 6px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.1em;
+}
+.video-descr {
+  font-size: 1.3em;
+}
+video {
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 0 5px rgb(88, 87, 87);
+  margin-bottom: 10px;
+}
+
+.rounded {
+  counter-reset: li;
+  list-style: none;
+  font: 14px "Trebuchet MS", "Lucida Sans";
+  padding: 0;
+}
+.rounded a {
+  position: relative;
+  display: block;
+  padding: 0.4em 0.4em 0.4em 2em;
+  margin: 0.5em 0;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.3em;
+  transition: 0.3s ease-out;
+}
+/* .rounded a:hover {
+  background: #e9e4e0;
+} */
+.rounded a:hover:before {
+  transform: rotate(360deg);
+}
+.rounded a:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: #c2175b;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: 0.3em solid white;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all 0.3s ease-out;
+}
+
+.goo {
+  font-size: 1rem;
+  line-height: 1.35;
+  display: inline;
+  box-decoration-break: clone;
+  background: rgb(68, 68, 68);
+  padding: 0.5rem 1rem;
+  filter: url("#goo");
+  color: white;
+}
+
+.goo:focus {
+  outline: 0;
+}
+
+/* .smoke {
+  transform: translate(-50%, -50%);
+}
+.smoke ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.smoke ul li {
+  list-style: none;
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+.smoke ul:hover li {
+  animation: animate 2s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+    filter: blur(1px);
+  }
+  100% {
+    transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+    filter: blur(20px);
+  }
+}
+
+.smoke ul li:nth-child(1) {
+  animation-delay: 0s;
+}
+.smoke ul li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.smoke ul li:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.smoke ul li:nth-child(4) {
+  animation-delay: 1.2s;
+}
+.smoke ul li:nth-child(5) {
+  animation-delay: 1.6s;
+} */
+.title {
+  font-family: "Montserrat";
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+}
+
+.title h1 {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 120px;
+  line-height: 0.75;
+  margin: 10px 0;
+}

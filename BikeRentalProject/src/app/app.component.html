@@ -2,15 +2,37 @@
   <mat-sidenav #sidenav #drawer fixedInViewport="true" [opened]="false">
     <mat-toolbar color="primary">Меню</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="'/home'"> Домашняя страница </a>
-      <a mat-list-item [routerLink]="'/create-account'"> Как это работает? </a>
-      <a mat-list-item [routerLink]="'/contacts'"> Просмотр велосипедов </a>
-      <a mat-list-item [routerLink]="'/create-contact'">
+      <a mat-list-item [routerLink]="'/home'" routerLinkActive="active">
+        Домашняя страница
+      </a>
+      <a mat-list-item [routerLink]="'/howItWorks'" routerLinkActive="active">
+        Как это работает?
+      </a>
+      <a mat-list-item [routerLink]="'/bikeView'" routerLinkActive="active">
+        Просмотр велосипедов
+      </a>
+      <a
+        mat-list-item
+        [routerLink]="'/create-contact'"
+        routerLinkActive="active"
+      >
         Забронировать велосипед
       </a>
-      <a mat-list-item [routerLink]="'/activities'"> О нас </a>
-      <a mat-list-item [routerLink]="'/create-activity'"> FAQ </a>
-      <a mat-list-item (click)="drawer.toggle()" href="" mat-list-item
+      <a mat-list-item [routerLink]="'/activities'" routerLinkActive="active">
+        О нас
+      </a>
+      <a
+        mat-list-item
+        [routerLink]="'/create-activity'"
+        routerLinkActive="active"
+      >
+        FAQ
+      </a>
+      <a
+        mat-list-item
+        (click)="drawer.toggle()"
+        mat-list-item
+        routerLinkActive="active"
         >Закрыть</a
       >
     </mat-nav-list>
@@ -22,61 +44,85 @@
         <button mat-icon-button>
           <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
         </button>
-        <h1>Прокат велосипедов</h1>
+        <h1 class="logo">Прокат велосипедов</h1>
         <span class="menu-spacer"></span>
-        <div>
-          <a mat-button [routerLink]="'/home'"> Домашняя страница </a>
-          <a mat-button [routerLink]="'/create-account'"> Как это работает? </a>
-          <a mat-button [routerLink]="'/contacts'"> Просмотр велосипедов </a>
-          <a mat-button [routerLink]="'/create-contact'">
+        <div class="links">
+          <a mat-button [routerLink]="'/home'" routerLinkActive="active">
+            Домашняя страница
+          </a>
+          <a mat-button [routerLink]="'/howItWorks'" routerLinkActive="active">
+            Как это работает?
+          </a>
+          <a mat-button [routerLink]="'/bikeView'" routerLinkActive="active">
+            Просмотр велосипедов
+          </a>
+          <a
+            mat-button
+            [routerLink]="'/create-contact'"
+            routerLinkActive="active"
+          >
             Забронировать велосипед
           </a>
-          <a mat-button [routerLink]="'/activities'"> О нас </a>
-          <a mat-button [routerLink]="'/create-activity'"> FAQ </a>
+          <a mat-button [routerLink]="'/activities'" routerLinkActive="active">
+            О нас
+          </a>
+          <a
+            mat-button
+            [routerLink]="'/create-activity'"
+            routerLinkActive="active"
+          >
+            FAQ
+          </a>
         </div>
       </mat-toolbar-row>
     </mat-toolbar>
     <div class="main-content"><router-outlet></router-outlet></div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
-<footer id="footer" class="footer d-flex align-items-center flex-column">
-  <div class="footer-wrap col-lg-9">
-    <div class="container">
-      <div class="row">
-        <div class="footer-links col-md-12 shadow">
-          <div class="mb-5 d-flex justify-content-center pt-5">
-            <a class="fb-ic">
-              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x">
-              </i>
-            </a>
-            <a class="tw-ic">
-              <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x">
-              </i>
-            </a>
-            <a class="gplus-ic">
-              <i
-                class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"
-              >
-              </i>
-            </a>
-            <a class="li-ic">
-              <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x">
-              </i>
-            </a>
-            <a class="ins-ic">
-              <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x">
-              </i>
-            </a>
-            <a class="pin-ic">
-              <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
-            </a>
+    <footer id="footer" class="footer d-flex align-items-center flex-column">
+      <div class="footer-wrap col-lg-9">
+        <div class="container">
+          <div class="row">
+            <div class="footer-links col-md-12 shadow">
+              <div class="mb-5 d-flex justify-content-center pt-5">
+                <a class="fb-ic">
+                  <i
+                    class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"
+                  >
+                  </i>
+                </a>
+                <a class="tw-ic">
+                  <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x">
+                  </i>
+                </a>
+                <a class="gplus-ic">
+                  <i
+                    class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"
+                  >
+                  </i>
+                </a>
+                <a class="li-ic">
+                  <i
+                    class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"
+                  >
+                  </i>
+                </a>
+                <a class="ins-ic">
+                  <i
+                    class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"
+                  >
+                  </i>
+                </a>
+                <a class="pin-ic">
+                  <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="footer-copyright text-center py-3">
+          © 2020 Copyright:
+          <a href="#"> BikeRide.com</a>
+        </div>
       </div>
-    </div>
-    <div class="footer-copyright text-center py-3">
-      © 2020 Copyright:
-      <a href="#"> BikeRide.com</a>
-    </div>
-  </div>
-</footer>
+    </footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

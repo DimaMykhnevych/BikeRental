@@ -1,0 +1,115 @@
+<div class="main mb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="three-D text-center">Как работает наш велопрокат?</h1>
+        <p class="video-descr text-center">
+          Предлагаем Вам посмотреть небольшое демо-видео:
+        </p>
+      </div>
+      <div class="col-lg-12 d-flex justify-content-center">
+        <video width="550" height="330" controls>
+          <source
+            src="../../assets/images/Прокат велосипедов Veliki.ua.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </div>
+    <div class="row d-flex flex-column align-items-center">
+      <div class="col-lg-12">
+        <h1 class="three-D text-center">Если у вас остались вопросы</h1>
+      </div>
+      <div class="col-lg-8">
+        <p class="mb-4" style="font-size: 1.4em">
+          Чтобы осуществить прокат на велосипеде, вам нужно выполнить следующие
+          действия:
+        </p>
+
+        <ol class="rounded">
+          <li>
+            <a>Просмотреть велосипеды и выбрать подходящий для вас</a>
+          </li>
+          <li><a>Выбрать подходящую локацию</a></li>
+          <li><a>Забронировать велосипед</a></li>
+          <li><a>Прийти к точке с велосипедами</a></li>
+          <li>
+            <a>Показать квитанцию сотруднику и наслаждаться поездкой :)</a>
+          </li>
+        </ol>
+      </div>
+      <div class="col-lg-8">
+        <h3>
+          <div class="goo">
+            В наших пунктах проката вы получите: <br />
+            - выбор среди самых новых и только оттестированных велосипедов;<br />
+            - только самые улыбчивые сотрудники. Потому что мы профессионалы,
+            которые любят свою работу и всегда посоветуем велосипед именно под
+            вас;<br />
+            - только самые яркие впечатления от путешествия на двухколесном
+            транспорте.
+          </div>
+        </h3>
+        <svg
+          style="visibility: hidden; position: absolute"
+          width="0"
+          height="0"
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+        >
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="10"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                result="goo"
+              />
+              <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+      <div class="col-lg-6">
+        <!-- <div class="smoke">
+          <ul>
+            <li>S</li>
+            <li>M</li>
+            <li>O</li>
+            <li>K</li>
+            <li>E</li>
+          </ul>
+        </div> -->
+        <div class="title">
+          <h1>
+            Ждем Вас <br />
+            С нетерпением!
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-end">
+      <ng-go-top-button
+        [animate]="true"
+        [speed]="50"
+        [acceleration]="2"
+        [scrollDistance]="300"
+        [classNames]="'custom-class'"
+        [styles]="{
+          'border-radius': '20px 20px 20px 20px',
+          right: '5px',
+          color: '#c2175b',
+          border: '5px solid',
+          'line-height': '20px'
+        }"
+      >
+        <i class="fa fa-arrow-up"></i>
+      </ng-go-top-button>
+    </div>
+  </div>
+</div>
