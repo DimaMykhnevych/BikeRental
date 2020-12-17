@@ -1,0 +1,68 @@
+table {
+  width: 100%;
+}
+.mat-cell {
+  padding: 15px;
+}
+.main-row {
+  font-style: italic;
+  font-weight: bold;
+}
+.mat-header-cell {
+  font-size: 1.4em;
+  color: aliceblue;
+  padding: 15px;
+}
+table {
+  box-shadow: 0 0 5px 2px #999;
+}
+.daily-row {
+  background-color: rgb(36, 35, 36);
+  /* rgb(36, 35, 36) */
+}
+.holiday-table {
+  box-shadow: 0 4px 5px 2px rgb(153, 153, 153, 0.7);
+}
+.holiday-row {
+  background-color: rgb(1, 32, 53);
+}
+.bike-type {
+  text-decoration: underline;
+}
+.button-info {
+  width: 220px;
+}
+.full-width {
+  width: 100%;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 300px;
+  width: 100%;
+}
+.search-panel {
+  position: fixed;
+  width: 40%;
+  z-index: 10;
+}
+/* .input-type {
+  width: 1000px;
+} */
+
+.inputs {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 5px 2px rgb(153, 153, 153, 0.7);
+}
+.budget {
+  border: 2px solid #4c268d;
+  border-style: dotted;
+  padding: 10px;
+  border-radius: 10px;
+}
+.not-found img {
+  width: 20%;
+}
+.not-found h2 {
+  color: #4c268d;
+}

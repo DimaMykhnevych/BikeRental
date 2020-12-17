@@ -11,11 +11,7 @@
       <a mat-list-item [routerLink]="'/bikeView'" routerLinkActive="active">
         Просмотр велосипедов
       </a>
-      <a
-        mat-list-item
-        [routerLink]="'/create-contact'"
-        routerLinkActive="active"
-      >
+      <a mat-list-item [routerLink]="'/orderBike'" routerLinkActive="active">
         Забронировать велосипед
       </a>
       <a mat-list-item [routerLink]="'/activities'" routerLinkActive="active">
@@ -56,11 +52,7 @@
           <a mat-button [routerLink]="'/bikeView'" routerLinkActive="active">
             Просмотр велосипедов
           </a>
-          <a
-            mat-button
-            [routerLink]="'/create-contact'"
-            routerLinkActive="active"
-          >
+          <a mat-button [routerLink]="'/orderBike'" routerLinkActive="active">
             Забронировать велосипед
           </a>
           <a mat-button [routerLink]="'/activities'" routerLinkActive="active">
@@ -76,53 +68,59 @@
         </div>
       </mat-toolbar-row>
     </mat-toolbar>
-    <div class="main-content"><router-outlet></router-outlet></div>
-    <footer id="footer" class="footer d-flex align-items-center flex-column">
-      <div class="footer-wrap col-lg-9">
-        <div class="container">
-          <div class="row">
-            <div class="footer-links col-md-12 shadow">
-              <div class="mb-5 d-flex justify-content-center pt-5">
-                <a class="fb-ic">
-                  <i
-                    class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"
-                  >
-                  </i>
-                </a>
-                <a class="tw-ic">
-                  <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x">
-                  </i>
-                </a>
-                <a class="gplus-ic">
-                  <i
-                    class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"
-                  >
-                  </i>
-                </a>
-                <a class="li-ic">
-                  <i
-                    class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"
-                  >
-                  </i>
-                </a>
-                <a class="ins-ic">
-                  <i
-                    class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"
-                  >
-                  </i>
-                </a>
-                <a class="pin-ic">
-                  <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
-                </a>
+    <div id="page-container">
+      <div id="content-wrap" class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+      <footer id="footer" class="footer d-flex align-items-center flex-column">
+        <div class="footer-wrap col-lg-9">
+          <div class="container">
+            <div class="row">
+              <div class="footer-links col-md-12 shadow">
+                <div class="mb-5 d-flex justify-content-center pt-5">
+                  <a class="fb-ic">
+                    <i
+                      class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"
+                    >
+                    </i>
+                  </a>
+                  <a class="tw-ic">
+                    <i
+                      class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"
+                    >
+                    </i>
+                  </a>
+                  <a class="gplus-ic">
+                    <i
+                      class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"
+                    >
+                    </i>
+                  </a>
+                  <a class="li-ic">
+                    <i
+                      class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"
+                    >
+                    </i>
+                  </a>
+                  <a class="ins-ic">
+                    <i
+                      class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"
+                    >
+                    </i>
+                  </a>
+                  <a class="pin-ic">
+                    <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+          <div class="footer-copyright text-center py-3">
+            © 2020 Copyright:
+            <a href="#"> BikeRide.com</a>
+          </div>
         </div>
-        <div class="footer-copyright text-center py-3">
-          © 2020 Copyright:
-          <a href="#"> BikeRide.com</a>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

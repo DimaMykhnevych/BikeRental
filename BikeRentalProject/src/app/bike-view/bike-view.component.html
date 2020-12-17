@@ -1,1 +1,167 @@
-<p>bike-view works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="text-center">Просмотр Велосипедов</h2>
+    </div>
+  </div>
+  <div class="row mb-4 search-panel">
+    <div class="col-lg-12" style="font-size: 1.4em">
+      <p>Панель поиска:</p>
+    </div>
+    <div class="col-lg-6">
+      <form class="example-form inputs">
+        <mat-form-field class="full-width">
+          <input
+            type="text"
+            class="input-type"
+            placeholder="Тип велосипеда"
+            aria-label="Number"
+            matInput
+            #input
+            [formControl]="myControl"
+            [matAutocomplete]="auto"
+            (click)="input.setSelectionRange(0, input.value.length)"
+          />
+          <mat-autocomplete
+            (optionSelected)="onChangeType($event.option)"
+            autoActiveFirstOption
+            #auto="matAutocomplete"
+          >
+            <mat-option
+              *ngFor="let option of filteredOptions | async"
+              [value]="getDisplayedType(option)"
+            >
+              {{ getDisplayedType(option) }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <div class="budget">
+          Бюджет, грн
+          <mat-form-field>
+            <input
+              matInput
+              (blur)="onStartPriceInput($event.target.value)"
+              type="number"
+              placeholder="От"
+              value=""
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              type="number"
+              (blur)="onEndPriceInput($event.target.value)"
+              placeholder="До"
+              value=""
+            />
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-6"></div>
+  </div>
+  <div *ngIf="filterBikes.length != 0">
+    <div
+      class="row bikes-prices d-flex justify-content-end"
+      *ngFor="let bike of filterBikes"
+    >
+      <div class="col-lg-3 d-flex justify-content-center align-items-center">
+        <img src="{{ bike.src }}" class="img-fluid" alt="bike" />
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="d-flex flex-column mb-3 align-items-center">
+          <h2 class="text-center bike-type m-0">
+            {{ bike.name }}
+          </h2>
+          <div>
+            <button
+              (click)="onMoreButtonClick(bike.type)"
+              class="button-info"
+              mat-raised-button
+            >
+              Подробнее о данном типе...
+            </button>
+          </div>
+        </div>
+
+        <table class="mat-table">
+          <tr class="mat-header-row daily-row">
+            <th class="mat-header-cell text-center" [attr.colspan]="4">
+              Будний день
+            </th>
+          </tr>
+          <tr class="mat-row main-row">
+            <td class="mat-cell text-center">1 час</td>
+            <td class="mat-cell text-center">3 часа</td>
+            <td class="mat-cell text-center">12 часов</td>
+            <td class="mat-cell text-center">Сутки</td>
+          </tr>
+          <tr class="mat-row">
+            <td class="mat-cell text-center">
+              {{ bike.businessDays.oneHour }} грн
+            </td>
+            <td class="mat-cell text-center">
+              {{ bike.businessDays.threeHours }} грн
+            </td>
+            <td class="mat-cell text-center">
+              {{ bike.businessDays.day }} грн
+            </td>
+            <td class="mat-cell text-center">
+              {{ bike.businessDays.fullDay }} грн
+            </td>
+          </tr>
+        </table>
+        <table class="mat-table holiday-table">
+          <tr class="mat-header-row holiday-row">
+            <th class="mat-header-cell text-center" [attr.colspan]="4">
+              Выходной день
+            </th>
+          </tr>
+          <tr class="mat-row main-row">
+            <td class="mat-cell text-center">1 час</td>
+            <td class="mat-cell text-center">3 часа</td>
+            <td class="mat-cell text-center">12 часов</td>
+            <td class="mat-cell text-center">Сутки</td>
+          </tr>
+          <tr class="mat-row">
+            <td class="mat-cell text-center">
+              {{ bike.holidays.oneHour }} грн
+            </td>
+            <td class="mat-cell text-center">
+              {{ bike.holidays.threeHours }} грн
+            </td>
+            <td class="mat-cell text-center">{{ bike.holidays.day }} грн</td>
+            <td class="mat-cell text-center">
+              {{ bike.holidays.fullDay }} грн
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="filterBikes.length == 0"
+    class="row not-found d-flex flex-column justify-content-end align-items-center"
+  >
+    <h2>К сожалению по вашему запросу ничего не было найдено</h2>
+    <img src="../../assets/images/not-found.jpg" />
+  </div>
+  <div class="row d-flex justify-content-center mb-5">
+    <ng-go-top-button
+      [animate]="true"
+      [speed]="50"
+      [acceleration]="2"
+      [scrollDistance]="300"
+      [classNames]="'custom-class'"
+      [styles]="{
+        'border-radius': '20px 20px 20px 20px',
+        right: '5px',
+        color: '#4c268d',
+        border: '5px solid',
+        'line-height': '20px'
+      }"
+    >
+      <i class="fa fa-arrow-up"></i>
+    </ng-go-top-button>
+  </div>
+</div>

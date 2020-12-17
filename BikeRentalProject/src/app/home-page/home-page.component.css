@@ -10,7 +10,7 @@
 .line {
   width: 100px;
   height: 5px;
-  background-color: rgb(230, 98, 120);
+  background-color: #4c268d;
   margin-bottom: 30px;
 }
 .example-card {
@@ -25,13 +25,13 @@
 }
 .bike-anim {
   position: absolute;
-  top: -20px;
+  top: -110px;
   left: 10px;
 }
 
 .bike-anim2 {
   position: absolute;
-  top: -20px;
+  top: -110px;
   left: 930px;
 }
 .descr {

@@ -1,0 +1,138 @@
+export const bikes = [
+  {
+    name: 'Городские велосипеды',
+    type: 'city',
+    src: '../../assets/images/city-bike.png',
+    businessDays: {
+      oneHour: 50,
+      threeHours: 100,
+      day: 160,
+      fullDay: 180,
+    },
+    holidays: {
+      oneHour: 60,
+      threeHours: 110,
+      day: 160,
+      fullDay: 200,
+    },
+  },
+  {
+    name: 'Горные велосипеды',
+    type: 'mountain',
+    src: '../../assets/images/mountain-bike.png',
+    businessDays: {
+      oneHour: 60,
+      threeHours: 120,
+      day: 180,
+      fullDay: 200,
+    },
+    holidays: {
+      oneHour: 70,
+      threeHours: 130,
+      day: 200,
+      fullDay: 240,
+    },
+  },
+  {
+    name: 'Круизеры',
+    type: 'crousier',
+    src: '../../assets/images/crousier-bike.png',
+    businessDays: {
+      oneHour: 70,
+      threeHours: 130,
+      day: 200,
+      fullDay: 240,
+    },
+    holidays: {
+      oneHour: 80,
+      threeHours: 150,
+      day: 220,
+      fullDay: 260,
+    },
+  },
+  {
+    name: 'Детские',
+    type: 'child',
+    src: '../../assets/images/child-bike.png',
+    businessDays: {
+      oneHour: 40,
+      threeHours: 80,
+      day: 120,
+      fullDay: 160,
+    },
+    holidays: {
+      oneHour: 50,
+      threeHours: 100,
+      day: 140,
+      fullDay: 180,
+    },
+  },
+  {
+    name: 'ФетБайк',
+    type: 'fatbike',
+    src: '../../assets/images/fat-bike.png',
+    businessDays: {
+      oneHour: 100,
+      threeHours: 200,
+      day: 300,
+      fullDay: 340,
+    },
+    holidays: {
+      oneHour: 120,
+      threeHours: 220,
+      day: 320,
+      fullDay: 360,
+    },
+  },
+  {
+    name: 'Профессиональные',
+    type: 'profi',
+    src: '../../assets/images/profy-bike.png',
+    businessDays: {
+      oneHour: 100,
+      threeHours: 200,
+      day: 300,
+      fullDay: 340,
+    },
+    holidays: {
+      oneHour: 120,
+      threeHours: 220,
+      day: 320,
+      fullDay: 360,
+    },
+  },
+  {
+    name: 'Тандем',
+    type: 'tandem',
+    src: '../../assets/images/tandem-bike2.png',
+    businessDays: {
+      oneHour: 120,
+      threeHours: 220,
+      day: 320,
+      fullDay: 360,
+    },
+    holidays: {
+      oneHour: 140,
+      threeHours: 240,
+      day: 340,
+      fullDay: 380,
+    },
+  },
+  {
+    name: 'Трехколесные',
+    type: 'threeWheels',
+    src: '../../assets/images/three-bike.png',
+    businessDays: {
+      oneHour: 120,
+      threeHours: 220,
+      day: 320,
+      fullDay: 360,
+    },
+    holidays: {
+      oneHour: 140,
+      threeHours: 240,
+      day: 340,
+      fullDay: 380,
+    },
+  },
+];
