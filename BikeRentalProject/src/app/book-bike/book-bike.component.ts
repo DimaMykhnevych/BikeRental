@@ -124,6 +124,7 @@ export class BookBikeComponent implements OnInit {
       ],
     },
   ];
+  isLoading = true;
   constructor(
     private service: BikesService,
     private notifiation: NotificationService,
@@ -137,5 +138,8 @@ export class BookBikeComponent implements OnInit {
       5000
     );
     this.router.navigate(['/home']);
+  }
+  public myLoadEvent() {
+    this.isLoading = false;
   }
 }

@@ -25,6 +25,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { BikeAnimationComponent } from './bike-animation/bike-animation.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
@@ -37,6 +38,7 @@ import { FormlyFieldStepper } from './stepper.type';
 import { NotificationService } from './notification.service';
 import { ToastrService } from 'ngx-toastr';
 import { CommentsComponent } from './comments/comments.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { CommentsComponent } from './comments/comments.component';
     BookBikeComponent,
     FormlyFieldStepper,
     CommentsComponent,
+    SpinnerComponent,
   ],
   imports: [
     CommonModule,
@@ -70,6 +73,7 @@ import { CommentsComponent } from './comments/comments.component';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
+    MatProgressSpinnerModule,
     MatStepperModule,
     FormlyBootstrapModule,
     ToastrModule.forRoot(),
