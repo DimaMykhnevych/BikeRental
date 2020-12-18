@@ -41,6 +41,7 @@ import { ToastrService } from 'ngx-toastr';
 import { CommentsComponent } from './comments/comments.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { FaqComponent } from './faq/faq.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { FaqComponent } from './faq/faq.component';
     CommentsComponent,
     SpinnerComponent,
     FaqComponent,
+    AboutUsComponent,
   ],
   imports: [
     CommonModule,
