@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ToastrModule } from 'ngx-toastr';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +40,7 @@ import { NotificationService } from './notification.service';
 import { ToastrService } from 'ngx-toastr';
 import { CommentsComponent } from './comments/comments.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
     FormlyFieldStepper,
     CommentsComponent,
     SpinnerComponent,
+    FaqComponent,
   ],
   imports: [
     CommonModule,
@@ -77,6 +80,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
     MatStepperModule,
     FormlyBootstrapModule,
     ToastrModule.forRoot(),
+    MDBBootstrapModule.forRoot(),
     FormlyModule.forRoot({
       validationMessages: [
         { name: 'required', message: 'Это поле обязательно' },

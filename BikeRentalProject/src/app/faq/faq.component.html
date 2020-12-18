@@ -1,0 +1,149 @@
+<div id="faq" class="faq d-flex align-items-center flex-column mb-4">
+  <div class="faq-wrap col-lg-9">
+    <h2 class="text-center">
+      Здесь вы можете найти ответы на часто задаваемые вопросы
+    </h2>
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Оплата происходит после поездки или до?
+            </button>
+          </h5>
+        </div>
+
+        <div
+          id="collapseOne"
+          class="collapse show"
+          aria-labelledby="headingOne"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            Оплата происходит до поездки, ведь так намного удобнее. Однако мы не
+            ограничичваем наших пользователей порядком оплаты, поэтому возможна
+            оплата и после совершения поездки, но вам придется оставить под
+            залог свой паспорт или водительские права.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link collapsed"
+              data-toggle="collapse"
+              data-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              А у вас есть система бонусов или скидок?
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseTwo"
+          class="collapse"
+          aria-labelledby="headingTwo"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            Да, конечно, у нас есть клубная карта. Вот некоторые фишки, которые
+            вам дает клубная карта: систему скидок на прокат велосипедов - 7я
+            поездка в подарок; скидки на покупку велосипедов; упрощенные
+            залоговые условия аренды велосипедов.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link collapsed"
+              data-toggle="collapse"
+              data-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Могу ли я отказаться от брони в случае непредвиденных
+              обстоятельств?
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseThree"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            Конечно вы можете отказаться от брони. Если вы не придете за
+            велосипедом в течение получаса, бронь снимается автоматически.
+            Однако по возможности, старайтесь нам сообщать о том, что вы
+            отменяете бронь. Это сэкономит время и нам и вам.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="text-center">Если у вас остались вопросы, свяжитесь с нами</h1>
+      <form
+        class="contact"
+        [formGroup]="form"
+        method="post"
+        (ngSubmit)="onSubmit()"
+      >
+        <mat-form-field>
+          <mat-label>Имя</mat-label>
+          <input matInput [formControl]="name" required />
+          <mat-error *ngIf="name.invalid"
+            >Пожалуйста, введите свое имя</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Электронная почта</mat-label>
+          <input
+            matInput
+            [formControl]="email"
+            placeholder="email@example.com"
+            required
+          />
+          <mat-error *ngIf="email.invalid"
+            >Пожалуйста, введите свое почту</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Сообщение</mat-label>
+          <textarea
+            matInput
+            [formControl]="message"
+            maxlength="256"
+            placeholder="Меня интересует..."
+            required
+          ></textarea>
+          <mat-hint align="end"> {{ message.value?.length || 0 }}/256</mat-hint>
+          <mat-error *ngIf="message.invalid"
+            >Пожалуйста, введите сообщение</mat-error
+          >
+        </mat-form-field>
+        <button [disabled]="isLoading" class="submit" type="submit">
+          Отправить
+        </button>
+        <input [formControl]="honeypot" class="hidden" type="text" />
+        <div [ngClass]="!submitted ? 'hidden' : 'visible'" class="center-text">
+          <span>{{ responseMessage }}</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
