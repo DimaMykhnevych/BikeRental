@@ -3,33 +3,33 @@
     <mat-toolbar color="primary">Меню</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item [routerLink]="'/home'" routerLinkActive="active">
-        Домашняя страница
+        Домашняя страница <i class="fas fa-home ml-1"></i>
       </a>
       <a mat-list-item [routerLink]="'/howItWorks'" routerLinkActive="active">
-        Как это работает?
+        Как это работает?<span class="material-icons"> build_circle </span>
       </a>
       <a mat-list-item [routerLink]="'/bikeView'" routerLinkActive="active">
-        Просмотр велосипедов
+        Просмотр велосипедов<span class="material-icons"> search </span>
       </a>
       <a mat-list-item [routerLink]="'/orderBike'" routerLinkActive="active">
-        Забронировать велосипед
+        Забронировать велосипед<span class="material-icons"> lock </span>
       </a>
       <a mat-list-item [routerLink]="'/activities'" routerLinkActive="active">
-        О нас
+        О нас<span class="material-icons"> supervisor_account </span>
       </a>
       <a
         mat-list-item
         [routerLink]="'/create-activity'"
         routerLinkActive="active"
       >
-        FAQ
+        FAQ<span class="material-icons"> help_outline </span>
       </a>
       <a
         mat-list-item
         (click)="drawer.toggle()"
         mat-list-item
         routerLinkActive="active"
-        >Закрыть</a
+        >Закрыть <span class="material-icons"> exit_to_app </span></a
       >
     </mat-nav-list>
   </mat-sidenav>
@@ -44,26 +44,26 @@
         <span class="menu-spacer"></span>
         <div class="links">
           <a mat-button [routerLink]="'/home'" routerLinkActive="active">
-            Домашняя страница
+            Домашняя страница <i class="fas fa-home"></i>
           </a>
           <a mat-button [routerLink]="'/howItWorks'" routerLinkActive="active">
-            Как это работает?
+            Как это работает? <span class="material-icons"> build_circle </span>
           </a>
           <a mat-button [routerLink]="'/bikeView'" routerLinkActive="active">
-            Просмотр велосипедов
+            Просмотр велосипедов <span class="material-icons"> search </span>
           </a>
           <a mat-button [routerLink]="'/orderBike'" routerLinkActive="active">
-            Забронировать велосипед
+            Забронировать велосипед <span class="material-icons"> lock </span>
           </a>
           <a mat-button [routerLink]="'/activities'" routerLinkActive="active">
-            О нас
+            О нас<span class="material-icons"> supervisor_account </span>
           </a>
           <a
             mat-button
             [routerLink]="'/create-activity'"
             routerLinkActive="active"
           >
-            FAQ
+            FAQ<span class="material-icons"> help_outline </span>
           </a>
         </div>
       </mat-toolbar-row>

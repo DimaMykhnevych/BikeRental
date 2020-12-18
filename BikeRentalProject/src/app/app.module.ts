@@ -36,6 +36,7 @@ import { FormlyFieldStepper } from './stepper.type';
 
 import { NotificationService } from './notification.service';
 import { ToastrService } from 'ngx-toastr';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ToastrService } from 'ngx-toastr';
     BikeInfoComponent,
     BookBikeComponent,
     FormlyFieldStepper,
+    CommentsComponent,
   ],
   imports: [
     CommonModule,
